@@ -50,7 +50,7 @@ with open('object_detection_classes_coco.txt') as f:
 if args.video:
     cap = cv2.VideoCapture(args.video)
 else:
-    cap = cv2.VideoCapture(-1)
+    cap = cv2.VideoCapture(0)
 
 # Initialize the network
 detector = Detector(args.weights, args.prototxt)
